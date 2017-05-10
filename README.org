@@ -1,0 +1,16 @@
+*** README.org
+
+Trying out the mix Java + Clojure project with the help of [[https://github.com/ztellman/virgil][virgil]]
+
+*** Basic Usage
+
+#+BEGIN_SRC sh
+git clone git@github.com:agilecreativity/try-virgil.git
+cd try-virgil
+lein deps :tree
+#+END_SRC
+
+- If you are using Emacs try =cider-jack-in=
+- Try change some code in the Java e.g. [[src/main/java/try_virgil/SimpleLib.java][SimpleLib.java]]
+- Then call the Java code from Clojure e.g. [[src/main/clj/try_virgil/core.clj][core.clj]]
+- Your Clojure code should use the modified version of Java code
