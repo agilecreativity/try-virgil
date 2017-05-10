@@ -14,3 +14,12 @@ lein deps :tree
 - Try change some code in the Java e.g. [[src/main/java/try_virgil/SimpleLib.java][SimpleLib.java]]
 - Then call the Java code from Clojure e.g. [[src/main/clj/try_virgil/core.clj][core.clj]]
 - Your Clojure code should use the modified version of Java code
+
+*** Sample Session
+
+#+STARTUP: noinlineimages
+
+#+CAPTION: Sample REPL session
+#+NAME: fig:repl-session-example.png
+[[./repl-session-example.png]]
+
