@@ -1,4 +1,5 @@
 (ns try-virgil.core
+  (:gen-class)
   (:import [try_virgil.SampleLib]))
 
 (defn hello-world
@@ -14,12 +15,10 @@
 (defn -main[& args]
   (try
     (hello-world)
-
     (println "Let's try to call java")
 
     (let [java-app (try_virgil.SimpleLib.)]
       (.greeting java-app "Max")
-      (println "------------")
       (.addNumber java-app 3 4))
     (catch Exception e
       (.printStackTrace e)

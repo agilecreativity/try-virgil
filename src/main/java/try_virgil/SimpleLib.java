@@ -1,22 +1,21 @@
 package try_virgil;
 
 public class SimpleLib {
-
     public void greeting(String name) {
         System.out.println("Hi there :" + name);
     }
 
     public void sayHi() {
-        System.out.println("Hi, what's your name?");
+        System.out.println("SimpleLib: what's your name?");
     }
 
     public int addNumber(int n1, int n2) {
-        System.out.println("Again I am using addNumber()");
+        System.out.println("SimpleLib: I am using addNumber()");
         return n1 + n2;
     }
 
     public int multNumber(int n1, int n2) {
-        System.out.println("FYI: I am in multNumber()");
+        System.out.println("SimpleLib: I am in multNumber()");
         return n1 * n2;
     }
 
