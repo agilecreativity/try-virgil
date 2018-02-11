@@ -1,20 +1,24 @@
-(ns try_virgil.core
-  (:gen-class)
+(ns try-virgil.core
   (:import [try_virgil.SampleLib]))
 
 (defn hello-world
-  []
-  (str "FYI: Hello, world!"))
+  ([]
+   (str "Hello, World!"))
+  ([who]
+   (str "Hello, World! : " who)))
+
+(defn greeting
+  [who]
+  (str "Hello " who))
 
 (defn -main[& args]
   (try
-    (println "Hello, world!")
     (hello-world)
 
     (println "Let's try to call java")
 
     (let [java-app (try_virgil.SimpleLib.)]
-      (.greeting java-app "Burin")
+      (.greeting java-app "Max")
       (println "------------")
       (.addNumber java-app 3 4))
     (catch Exception e

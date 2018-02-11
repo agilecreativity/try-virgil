@@ -5,6 +5,7 @@
             :url  "http://www.eclipse.org/legal/epl-v10.html"}
   :source-paths ["src/main/clj"]
   :java-source-paths ["src/main/java"]
-  :plugins [[lein-virgil "0.1.6"]]
-  :dependencies [[org.clojure/clojure "1.8.0"]]
+  :plugins [[lein-virgil "0.1.7"]
+            [lein-auto "0.1.3"]]
+  :dependencies [[org.clojure/clojure "1.9.0"]]
   :main try_virgil.core)
