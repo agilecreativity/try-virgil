@@ -1,25 +1,29 @@
-*** README - try-virgil
+*** try-virgil
 
-Trying out the mix Java + Clojure project with the help of [[https://github.com/ztellman/virgil][virgil]]
+Java/Clojure interop project automatically reloaded with [[https://github.com/ztellman/virgil][virgil]] and [[https://github.com/weavejester/lein-auto][lein-auto]].
 
 *** Basic Usage
 
-#+BEGIN_SRC sh
-git clone git@github.com:agilecreativity/try-virgil.git
-cd try-virgil
-lein deps :tree
-# Then try some test with
-lein auto test
+**** Pull the code and run locally
+ #+BEGIN_SRC sh
+ git clone git@github.com:agilecreativity/try-virgil.git
 
-# edit the source code in src/main/java/ or /src/main/clj/
-# then the test should be updated and re-compiled automatically
-#+END_SRC
+ cd try-virgil
 
-- If you are using Emacs try =cider-jack-in=
-- Try change some code in the Java e.g. [[src/main/java/try_virgil/SimpleLib.java][SimpleLib.java]]
-- Then call the Java code from Clojure e.g. [[src/main/clj/try_virgil/core.clj][core.clj]]
-  Or try running the test =lein auto test=
-- Your Clojure code should use the modified version of Java code
+ # Get the dependencies
+ lein deps :tree
+
+ # Start the test session using =auto test=
+ lein auto test
+ #+END_SRC
+
+**** Change the Java/Clojure codes and notice the =lein auto test= console log.
+
+ - Try change some code in the Java e.g. [[src/main/java/try_virgil/JavaLib.java][JavaLib.java]]
+ - Try change some Clojure code in [[src/main/clj/try_virgil/core.clj][core.clj]]
+ - Try change the test code that use both Java and Clojure in [[test/clj/try_virgil/core_test.clj][core_test.clj]]
+
+The console of =lein auto test= should be automatically triggered based on changes.
 
 *** Sample Session
 
@@ -29,10 +33,12 @@ lein auto test
 [[./repl-session-example.png]]
 
 *** Useful Links
-
 **** https://github.com/clojure-cookbook/clojure-cookbook/blob/master/10_testing/10-01_unit-testing.asciidoc
 **** https://github.com/clojure-cookbook/clojure-cookbook/blob/master/10_testing/10-01_unit-testing.asciidoc
 **** http://clojure.github.io/clojure/clojure.test-api.html
 **** https://clojuredocs.org/clojure.test/use-fixtures
 **** https://clojuredocs.org/clojure.test
 **** http://blog.jayfields.com/2010/08/clojuretest-introduction.html
+
+*** TODOs
+**** TODO Add =junit= test for Java code
