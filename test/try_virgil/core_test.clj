@@ -1,4 +1,5 @@
 (ns try-virgil.core-test
+  (:import [try_virgil.SampleLib])
   (:require [clojure.test :refer :all]
             [try-virgil.core :refer :all]))
 
@@ -9,20 +10,16 @@
 ;; https://clojuredocs.org/clojure.test
 ;; http://blog.jayfields.com/2010/08/clojuretest-introduction.html
 
-;; Note: not working!
-;; (deftest java-lib-test
-;;   (let [java-lib (try_virgil.SampleLib.)]
-;;     (testing "calling java functions"
-;;       (is (= (.greeting java-lib "Max") "asss")))))
-#_
-
+;; Finally, the working edition
+(deftest java-lib-test
+    (testing "java-lib-test"
+        (println "About to call the Java code!")
+        (let [java-lib (try_virgil.SimpleLib.)]
+            (.greeting java-lib "Max"))
+        (is (= 1 1))))
 
 (deftest hello-world-test
   (testing "Simple sanity test !"
-    (println "FYI: inside test")
-    #_
-    (let [x (try_virgil.SampleLib.)]
-      (println "FYI: xxx"))
     (is (= (hello-world) "Hello, World!"))
     (is (= (hello-world "Burin") "Hello, World! : Burin"))))
 

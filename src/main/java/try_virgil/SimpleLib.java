@@ -10,7 +10,6 @@ public class SimpleLib {
     }
 
     public int addNumber(int n1, int n2) {
-        System.out.println("SimpleLib: I am using addNumber()");
         return n1 + n2;
     }
 

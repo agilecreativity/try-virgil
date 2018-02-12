@@ -4,6 +4,7 @@
   :license {:name "Eclipse Public License"
             :url  "http://www.eclipse.org/legal/epl-v10.html"}
   :source-paths ["src/main/clj"]
+  :test-paths ["test"] ;; Note: may be split to test/java|test/clj
   :java-source-paths ["src/main/java"]
   :plugins [[lein-virgil "0.1.6"]
             [lein-auto "0.1.3"]]
