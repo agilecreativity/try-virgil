@@ -8,11 +8,6 @@ public class SimpleLib {
         return n1 + n2;
     }
 
-    public int multNumber(int n1, int n2) {
-        System.out.println("SimpleLib: I am in multNumber()");
-        return n1 * n2;
-    }
-
     public static void main(String[] args) {
         SimpleLib app = new try_virgil.SimpleLib();
 
@@ -20,6 +15,7 @@ public class SimpleLib {
         System.out.println("Your message : " + message);
 
         System.out.println("FYI: add two number(3,4)" + app.addNumber(3,4));
+
         String userHome = System.getenv("HOME");
         System.out.println("userHome" + userHome);
     }
