@@ -1,4 +1,4 @@
-*** README.org
+*** README - try-virgil
 
 Trying out the mix Java + Clojure project with the help of [[https://github.com/ztellman/virgil][virgil]]
 
@@ -13,13 +13,21 @@ lein deps :tree
 - If you are using Emacs try =cider-jack-in=
 - Try change some code in the Java e.g. [[src/main/java/try_virgil/SimpleLib.java][SimpleLib.java]]
 - Then call the Java code from Clojure e.g. [[src/main/clj/try_virgil/core.clj][core.clj]]
+  Or try running the test =lein auto test=
 - Your Clojure code should use the modified version of Java code
 
 *** Sample Session
 
 #+STARTUP: noinlineimages
-
 #+CAPTION: Sample REPL session
 #+NAME: fig:repl-session-example.png
 [[./repl-session-example.png]]
 
+*** Useful Links
+
+**** https://github.com/clojure-cookbook/clojure-cookbook/blob/master/10_testing/10-01_unit-testing.asciidoc
+**** https://github.com/clojure-cookbook/clojure-cookbook/blob/master/10_testing/10-01_unit-testing.asciidoc
+**** http://clojure.github.io/clojure/clojure.test-api.html
+**** https://clojuredocs.org/clojure.test/use-fixtures
+**** https://clojuredocs.org/clojure.test
+**** http://blog.jayfields.com/2010/08/clojuretest-introduction.html

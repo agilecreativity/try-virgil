@@ -1,8 +1,8 @@
 package try_virgil;
 
 public class SimpleLib {
-    public void greeting(String name) {
-        System.out.println("Hi there :" + name);
+    public String greeting(String name) {
+        return "Hi there, " + name;
     }
 
     public void sayHi() {
