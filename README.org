@@ -8,6 +8,11 @@ Trying out the mix Java + Clojure project with the help of [[https://github.com/
 git clone git@github.com:agilecreativity/try-virgil.git
 cd try-virgil
 lein deps :tree
+# Then try some test with
+lein auto test
+
+# edit the source code in src/main/java/ or /src/main/clj/
+# then the test should be updated and re-compiled automatically
 #+END_SRC
 
 - If you are using Emacs try =cider-jack-in=
