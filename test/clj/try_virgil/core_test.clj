@@ -1,13 +1,13 @@
 (ns try-virgil.core-test
-  (:import [try_virgil.SampleLib])
+  (:import [try_virgil.JavaLib])
   (:require [clojure.test :refer :all]
             [try-virgil.core :refer :all]))
 
-(deftest jvm-hello-tst
-  (testing "greeting (Java)"
-    (let [java-lib (try_virgil.SimpleLib.)]
-      (is (= (.greeting java-lib "Max") "Hi there, Max")))))
+(deftest java-greeting-test
+  (testing "greeting with Java"
+    (let [java-lib (try_virgil.JavaLib.)]
+      (is (= (.greeting java-lib "Burin") "Greeting from Java : Burin")))))
 
-(deftest clj-hello-test
-  (testing "greeting (Clojure)"
-    (is (= (greeting "Burin") "Hello there, Burin"))))
+(deftest clojure-greeting-test
+  (testing "greeting with Clojure"
+    (is (= (greeting "Burin") "Greeting from Clojure : Burin"))))

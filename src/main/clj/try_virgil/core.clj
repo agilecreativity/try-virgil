@@ -1,18 +1,18 @@
 (ns try-virgil.core
-  (:import [try_virgil.SampleLib]))
+  (:import [try_virgil.JavaLib]))
 
 (defn greeting
   [who]
-  (str "Hello there, " who))
+  (str "Greeting from Clojure : " who))
 
 (defn -main[& args]
   (try
-    (greeting "Burin")
-    (println "Let's try to call java")
+    ;; Calling Clojure function
+    (greeting "Clojure")
 
-    (let [java-app (try_virgil.SimpleLib.)]
-      (.greeting java-app "Max")
-      (.addNumber java-app 3 4))
+    (let [java-lib (try_virgil.JavaLib.)]
+      ;; Calling Java function
+      (.greeting java-lib "Java"))
     (catch Exception e
       (.printStackTrace e)
       (println (str "Unexpected errros: " (.getMessage e))))))
