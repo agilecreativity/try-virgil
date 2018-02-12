@@ -1,5 +1,4 @@
 package try_virgil;
-
 public class SimpleLib {
     public String greeting(String name) {
         return "Hi there, " + name;
@@ -22,6 +21,7 @@ public class SimpleLib {
         SimpleLib app = new try_virgil.SimpleLib();
 
         app.greeting("Clojurian");
+
         app.sayHi();
 
         System.out.println("FYI: add two number(3,4)" + app.addNumber(3,4));

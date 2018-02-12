@@ -4,10 +4,14 @@
   (:require [clojure.test :refer :all]
             [try-virgil.core :refer :all]))
 
-(deftest java-lib-test
-  (testing "java-lib-test"
+(deftest jvm-hello-tst
+  (testing "jav-hello-test"
     (let [java-lib (try_virgil.SimpleLib.)]
       (is (= (.greeting java-lib "Max") "Hi there, Max")))))
+
+(deftest clj-hello-test
+  (testing "clj-hello-test"
+    (is (= (clj-hello "Burin") "clj-hello : Burin"))))
 
 (deftest hello-world-test
   (testing "Simple sanity test !"

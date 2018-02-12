@@ -1,5 +1,4 @@
 (ns try-virgil.core
-  (:gen-class)
   (:import [try_virgil.SampleLib]))
 
 (defn hello-world
@@ -7,6 +6,10 @@
    (str "Hello, World!"))
   ([who]
    (str "Hello, World! : " who)))
+
+(defn clj-hello
+  [who]
+  (str "clj-hello : " who))
 
 (defn greeting
   [who]
