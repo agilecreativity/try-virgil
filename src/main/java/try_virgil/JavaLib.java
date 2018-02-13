@@ -1,6 +1,8 @@
 package try_virgil;
 public class JavaLib {
+    // Sample stuffs -- and more
     public String greeting(String name) {
+        //xxx
         return "Greeting from Java : " + name;
     }
 
