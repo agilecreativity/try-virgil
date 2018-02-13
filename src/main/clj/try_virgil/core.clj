@@ -3,6 +3,7 @@
 
 (defn greeting
   [who]
+  ;; Note:
   (str "Greeting from Clojure : " who))
 
 (defn -main[& args]
