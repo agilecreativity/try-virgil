@@ -1,11 +1,9 @@
 (ns try-virgil.core
   (:import [try_virgil.JavaLib]))
 
-;; (log/set-level! :error)
-
 (defn greeting
   [who]
-  (str "xGreeting from Clojure : " who))
+  (str "Greeting from Clojure : " who))
 
 (defn -main[& args]
   (try
