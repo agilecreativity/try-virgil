@@ -3,6 +3,9 @@
 
 (defn greeting
   [who]
+  #_
+  (let [java-lib (try_virgil.JavaLib.)]
+    (println "FYI: " (.greeting java-lib "Java")))
   (str "Greeting from Clojure : " who))
 
 (defn -main[& args]
