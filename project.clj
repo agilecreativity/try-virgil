@@ -6,8 +6,8 @@
   :source-paths ["src/main/clj"]
   :test-paths ["test/clj" "test/java"]
   :java-source-paths ["src/main/java"]
-  :plugins [[lein-virgil "0.1.6"]
+  :plugins [[lein-virgil "0.1.9"]
             [lein-auto "0.1.3"]]
   :auto {:default {:file-pattern #"\.(java|clj|cljs|cljx|cljc|edn)$"}}
-  :dependencies [[org.clojure/clojure "1.9.0"]]
+  :dependencies [[org.clojure/clojure "1.11.1"]]
   :main try-virgil.core)

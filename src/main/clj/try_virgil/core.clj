@@ -1,21 +1,22 @@
 (ns try-virgil.core
-  (:import [try_virgil.JavaLib]))
+  (:import [try_virgil JavaLib]))
 
-(defn greeting
+(defn greeting-clj
   [who]
-  #_
-  (let [java-lib (try_virgil.JavaLib.)]
-    (println "FYI: " (.greeting java-lib "Java")))
-  (str "Greeting from Clojure : " who))
+  (str "Howdy from Clojure : " who))
 
-(defn -main[& args]
+(defn calling-java
+  [msg]
+  (let [java-lib (JavaLib.)]
+    (.greeting java-lib msg)))
+
+(defn -main [& _args]
   (try
     ;; Calling Clojure function
-    (greeting "Clojure")
-
-    (let [java-lib (try_virgil.JavaLib.)]
+    (greeting-clj "Clojure")
+    (let [mylib (JavaLib.)]
       ;; Calling Java function
-      (.greeting java-lib "Java"))
+      (.greeting mylib "Java"))
     (catch Exception e
       (.printStackTrace e)
       (println (str "Unexpected errros: " (.getMessage e))))))
