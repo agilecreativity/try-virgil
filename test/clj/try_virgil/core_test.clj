@@ -2,7 +2,8 @@
   (:require [clojure.test :as t
              :refer [is deftest testing]]
             [try-virgil.core :refer [greeting-clj
-                                     calling-java]])
+                                     calling-java]
+             :as sut])
   (:import [try_virgil JavaLib]))
 
 (deftest sanity-test
@@ -25,3 +26,8 @@
     (is (= (greeting-clj "Burin") "Howdy from Clojure : Burin")))
   (testing "calling to java"
     (is (= (calling-java "Burin") "Greeting from Java : Burin"))))
+
+(deftest more-ops-test
+  (testing "greeting with Clojure"
+    (let [java-lib (JavaLib.)]
+      (is (= (.addTwo java-lib 1 2) 3)))))
