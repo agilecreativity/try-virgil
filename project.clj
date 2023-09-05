@@ -9,5 +9,5 @@
   :plugins [[lein-virgil "0.1.9"]
             [lein-auto "0.1.3"]]
   :auto {:default {:file-pattern #"\.(java|clj|cljs|cljx|cljc|edn)$"}}
-  :dependencies [[org.clojure/clojure "1.11.1"]]
+  :dependencies [[org.clojure/clojure "1.12.0-alpha4"]]
   :main try-virgil.core)
